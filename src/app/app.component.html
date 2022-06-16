@@ -1,7 +1,26 @@
-<app-top-bar></app-top-bar>
-
 <div class="container">
-  <router-outlet></router-outlet>
+  <!-- Normal component -->
+  <!-- <app-generic-header></app-generic-header> -->
+  <!-- inline style component-->
+  <!-- <app-inline-style-comp></app-inline-style-comp> -->
+  <!-- inline template component-->
+  <!-- <app-inline-template-comp></app-inline-template-comp> -->
+  <!-- inline template and style component-->
+  <!-- <app-inline-template-andstyle-component></app-inline-template-andstyle-component> -->
+  <!-- component from another module -->
+  <!-- <app-generic-button></app-generic-button> -->
+  <!-- <input name="username" placeholder="User name" #username />
+  <button (click)="getFieldData(username.value)">Click me</button> -->
+  <!-- <button (click)="getCounter('increment')">+</button>
+  <div>Counter: {{ counter }}</div>
+  <button (click)="getCounter('decrement')">-</button> -->
+
+  <!-- in both case disable is false but in interpolation it is considered as string but in property binding it is taken as boolean -->
+  <!-- interpolation: It will not accept boolean values -->
+  <input type="text" value="peter" disabled="{{ disable }}" />
+
+  <!-- property binding: It will accept boolean values -->
+  <input type="text" value="peter" [disabled]="disable" />
 </div>
 
 <!-- 
