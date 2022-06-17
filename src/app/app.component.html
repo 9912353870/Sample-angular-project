@@ -11,20 +11,58 @@
   <!-- <app-generic-button></app-generic-button> -->
   <!-- <input name="username" placeholder="User name" #username />
   <button (click)="getFieldData(username.value)">Click me</button> -->
+
   <!-- <button (click)="getCounter('increment')">+</button>
   <div>Counter: {{ counter }}</div>
   <button (click)="getCounter('decrement')">-</button> -->
 
+  <!-- <div *ngIf="even; else odd">
+    <h1>Even: {{ counter }}</h1>
+  </div>
+  <ng-template #odd>
+    <div>
+      <h1>Odd: {{ counter }}</h1>
+    </div>
+  </ng-template> -->
+
+  <!-- <div *ngIf="even; then evenVal; else oddVal"></div>
+  <ng-template #evenVal>Even: {{ counter }}</ng-template>
+  <ng-template #oddVal>Odd: {{ counter }}</ng-template> -->
+
   <!-- in both case disable is false but in interpolation it is considered as string but in property binding it is taken as boolean -->
   <!-- interpolation: It will not accept boolean values -->
-  <input type="text" value="peter" disabled="{{ disable }}" />
+  <!-- <input type="text" value="peter" disabled="{{ disable }}" /> -->
 
   <!-- property binding: It will accept boolean values -->
-  <input type="text" value="peter" [disabled]="disable" />
-</div>
+  <!-- <input type="text" value="peter" [disabled]="disable" /> -->
 
-<!-- 
+  <!-- else-if condition using property binding -->
+  <!-- <button (click)="changeColor()">change color</button>
+  <ng-template [ngIf]="counter === 1"
+    ><h1 style="color: red">Red</h1></ng-template
+  >
+  <ng-template [ngIf]="counter === 2"
+    ><h1 style="color: yellow">yellow</h1></ng-template
+  >
+  <ng-template [ngIf]="counter === 3"
+    ><h1 style="color: green">green</h1></ng-template
+  >
+</div> -->
+
+  <!-- ngSwitch example-->
+  <h1>ng switch</h1>
+  <button (click)="changeColor(6)">change color</button>
+  <div [ngSwitch]="counter">
+    <h1 *ngSwitchCase="1" style="color: red">Red</h1>
+    <h1 *ngSwitchCase="2" style="color: blue">blue</h1>
+    <h1 *ngSwitchCase="3" style="color: green">green</h1>
+    <h1 *ngSwitchCase="4" style="color: yellow">yellow</h1>
+    <h1 *ngSwitchCase="5" style="color: teal">teal</h1>
+    <h1 *ngSwitchDefault>Un-known</h1>
+  </div>
+
+  <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
--->
+--></div>
